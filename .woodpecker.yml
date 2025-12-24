@@ -1,0 +1,56 @@
+# Woodpecker CI configuration
+# Calls the same build script as GitHub Actions
+
+steps:
+  - name: build-15-latest
+    image: /bin/sh
+    environment:
+      GITHUB_TOKEN:
+        from_secret: GITHUB_TOKEN
+      GITHUB_ACTOR:
+        from_secret: GITHUB_USER
+    commands:
+      - |
+        # Download shared build script (pinned to version)
+        mkdir -p scripts
+        fetch -qo scripts/build-intermediate.sh \
+          "https://raw.githubusercontent.com/daemonless/daemonless/build-intermediate-v1.0.0/scripts/build-intermediate.sh"
+        chmod +x scripts/build-intermediate.sh
+
+        ./scripts/build-intermediate.sh \
+          --doas \
+          --registry ghcr.io \
+          --image ghcr.io/daemonless/arr-base \
+          --base-version 15 \
+          --tags "15,latest,pkg-latest" \
+          --login --push
+
+  - name: build-15-quarterly
+    image: /bin/sh
+    environment:
+      GITHUB_TOKEN:
+        from_secret: GITHUB_TOKEN
+      GITHUB_ACTOR:
+        from_secret: GITHUB_USER
+    commands:
+      - |
+        # Download shared build script (pinned to version)
+        mkdir -p scripts
+        fetch -qo scripts/build-intermediate.sh \
+          "https://raw.githubusercontent.com/daemonless/daemonless/build-intermediate-v1.0.0/scripts/build-intermediate.sh"
+        chmod +x scripts/build-intermediate.sh
+
+        ./scripts/build-intermediate.sh \
+          --doas \
+          --registry ghcr.io \
+          --image ghcr.io/daemonless/arr-base \
+          --base-version 15-quarterly \
+          --tags "15-quarterly,pkg" \
+          --login --push
+
+when:
+  - event: push
+    branch: main
+    path:
+      exclude: [ "*.md", "LICENSE", ".gitignore" ]
+  - event: manual

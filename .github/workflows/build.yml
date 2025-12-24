@@ -1,0 +1,71 @@
+name: Build FreeBSD Container
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['*.md', 'LICENSE', '.gitignore']
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # Build with base:15 (latest packages)
+          - base_version: "15"
+            tags: "15,latest,pkg-latest"
+
+          # Build with base:15-quarterly
+          - base_version: "15-quarterly"
+            tags: "15-quarterly,pkg"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build in FreeBSD VM (${{ matrix.base_version }})
+        uses: vmactions/freebsd-vm@v1.3.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_ACTOR: ${{ github.actor }}
+        with:
+          release: "15.0"
+          usesh: true
+          copyback: false
+          envs: "GITHUB_TOKEN GITHUB_ACTOR"
+          prepare: |
+            pkg install -y podman
+            rm -rf /var/db/containers /var/lib/containers 2>/dev/null || true
+            kldload pf
+            sysctl net.inet.ip.forwarding=1
+          run: |
+            set -e
+            # Download shared build script (pinned to version)
+            mkdir -p scripts
+            fetch -qo scripts/build-intermediate.sh \
+              "https://raw.githubusercontent.com/daemonless/daemonless/build-intermediate-v1.0.0/scripts/build-intermediate.sh"
+            chmod +x scripts/build-intermediate.sh
+
+            PUSH_FLAG=""
+            if [ "${{ github.event_name }}" != "pull_request" ]; then
+              PUSH_FLAG="--login --push"
+            fi
+
+            ./scripts/build-intermediate.sh \
+              --registry ${{ env.REGISTRY }} \
+              --image ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }} \
+              --base-version ${{ matrix.base_version }} \
+              --tags "${{ matrix.tags }}" \
+              $PUSH_FLAG
