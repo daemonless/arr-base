@@ -2,25 +2,19 @@ ARG BASE_VERSION=15
 FROM ghcr.io/daemonless/base:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
+ARG PACKAGES="sqlite3 icu libunwind libinotify libiconv krb5 ca_root_nss compat13x-amd64 openssl"
+
 LABEL org.opencontainers.image.title="arr-base" \
-      org.opencontainers.image.description="Common base image for *arr applications on FreeBSD" \
-      org.opencontainers.image.source="https://github.com/daemonless/arr-base" \
-      org.opencontainers.image.vendor="daemonless" \
-      org.opencontainers.image.authors="daemonless" \
-      org.freebsd.jail.allow.mlock="required"
+    org.opencontainers.image.description="Common base image for *arr applications on FreeBSD" \
+    org.opencontainers.image.source="https://github.com/daemonless/arr-base" \
+    org.opencontainers.image.vendor="daemonless" \
+    org.opencontainers.image.authors="daemonless" \
+    io.daemonless.packages="${PACKAGES}" \
+    org.freebsd.jail.allow.mlock="required"
 
 # Install common .NET dependencies required by Servarr apps
 RUN pkg update && \
-    pkg install -y \
-        sqlite3 \
-        icu \
-        libunwind \
-        libinotify \
-        libiconv \
-        krb5 \
-        ca_root_nss \
-        compat13x-amd64 \
-        openssl && \
+    pkg install -y ${PACKAGES} && \
     pkg clean -ay && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
 
