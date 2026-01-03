@@ -24,3 +24,4 @@ RUN ln -sf libsqlite3.so /usr/local/lib/libe_sqlite3.so && ldconfig
 
 # Add common init scripts if needed
 COPY root/ /
+COPY scripts/install-arr.sh /usr/local/bin/install-arr.sh
