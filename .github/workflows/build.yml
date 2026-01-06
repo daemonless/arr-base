@@ -47,6 +47,10 @@ jobs:
           copyback: false
           envs: "GITHUB_TOKEN GITHUB_ACTOR"
           prepare: |
+            set -e
+            mkdir -p /etc/pkg
+            echo 'FreeBSD: { url: "http://pkg.FreeBSD.org/${ABI}/latest" }' > /etc/pkg/FreeBSD.conf
+            pkg update -f
             pkg install -y podman
             rm -rf /var/db/containers /var/lib/containers 2>/dev/null || true
             kldload pf
