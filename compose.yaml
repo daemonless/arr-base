@@ -1,0 +1,15 @@
+name: arr-base
+
+x-daemonless:
+  title: "Arr Base"
+  icon: ":material-layers:"
+  category: "Base"
+  description: "Shared base image for *Arr applications (Radarr, Sonarr, Lidarr, Prowlarr) containing common dependencies."
+  upstream_url: "https://github.com/daemonless/arr-base"
+  web_url: "https://wiki.servarr.com/"
+  user: "root"
+  upstream_binary: false
+  
+  docs: {}
+
+services: {}

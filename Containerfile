@@ -10,6 +10,7 @@ LABEL org.opencontainers.image.title="arr-base" \
     org.opencontainers.image.vendor="daemonless" \
     org.opencontainers.image.authors="daemonless" \
     io.daemonless.type="base" \
+    io.daemonless.category="Base" \
     io.daemonless.packages="${PACKAGES}" \
     org.freebsd.jail.allow.mlock="required"
 

@@ -1,30 +1,64 @@
-# arr-base
+# Arr Base
 
-Common base image for native FreeBSD OCI containers running *arr applications (Sonarr, Radarr, Lidarr, etc.).
+Shared base image for *Arr applications (Radarr, Sonarr, Lidarr, Prowlarr) containing common dependencies.
 
-## Overview
+| | |
+|---|---|
+| **Registry** | `ghcr.io/daemonless/arr-base` |
+| **Source** | [https://github.com/daemonless/arr-base](https://github.com/daemonless/arr-base) |
+| **Website** | [https://wiki.servarr.com/](https://wiki.servarr.com/) |
 
-This image inherits from `ghcr.io/daemonless/base` and adds the common dependencies required by the .NET runtime on FreeBSD, which all Servarr applications share.
+## Deployment
 
-## Features
+### Podman Compose
 
-- **Common Dependencies**: Includes `sqlite3`, `icu`, `libunwind`, `libinotify`, `libiconv`, `krb5`, and `ca_root_nss`.
-- **.NET Interop**: Pre-configured `libe_sqlite3.so` symlink for SQLite interop.
-- **Multi-OS Support**: Available for FreeBSD 14 and 15.
-
-## Usage
-
-Use this as the base for your *arr application images:
-
-```dockerfile
-ARG BASE_VERSION=15
-FROM ghcr.io/daemonless/arr-base:${BASE_VERSION}
-
-# Download and install your app...
+```yaml
+services:
+  arr-base:
+    image: ghcr.io/daemonless/arr-base:latest
+    container_name: arr-base
+    environment:
+    volumes:
+    ports:
+    restart: unless-stopped
 ```
 
-## Tagging
+### Podman CLI
 
-- `ghcr.io/daemonless/arr-base:latest` -> FreeBSD 15
-- `ghcr.io/daemonless/arr-base:15` -> FreeBSD 15
-- `ghcr.io/daemonless/arr-base:14` -> FreeBSD 14
+```bash
+podman run -d --name arr-base \
+  ghcr.io/daemonless/arr-base:latest
+```
+
+### Ansible
+
+```yaml
+- name: Deploy arr-base
+  containers.podman.podman_container:
+    name: arr-base
+    image: ghcr.io/daemonless/arr-base:latest
+    state: started
+    restart_policy: always
+```
+
+## Configuration
+
+### Environment Variables
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+
+### Volumes
+
+| Path | Description |
+|------|-------------|
+
+### Ports
+
+| Port | Protocol | Description |
+|------|----------|-------------|
+
+## Notes
+
+- **User:** `root` (UID/GID set via PUID/PGID)
+- **Base:** Built on `ghcr.io/daemonless/base` (FreeBSD)
