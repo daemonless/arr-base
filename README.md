@@ -17,9 +17,6 @@ services:
   arr-base:
     image: ghcr.io/daemonless/arr-base:latest
     container_name: arr-base
-    environment:
-    volumes:
-    ports:
     restart: unless-stopped
 ```
 
@@ -42,21 +39,6 @@ podman run -d --name arr-base \
 ```
 
 ## Configuration
-
-### Environment Variables
-
-| Variable | Default | Description |
-|----------|---------|-------------|
-
-### Volumes
-
-| Path | Description |
-|------|-------------|
-
-### Ports
-
-| Port | Protocol | Description |
-|------|----------|-------------|
 
 ## Notes
 
