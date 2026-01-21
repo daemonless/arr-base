@@ -10,6 +10,7 @@ Shared base image for *Arr applications (Radarr, Sonarr, Lidarr, Prowlarr) conta
 | | |
 |---|---|
 | **Registry** | `ghcr.io/daemonless/arr-base` |
+| **Docs** | [daemonless.io/images/arr-base](https://daemonless.io/images/arr-base/) |
 | **Source** | [https://github.com/daemonless/arr-base](https://github.com/daemonless/arr-base) |
 | **Website** | [https://wiki.servarr.com/](https://wiki.servarr.com/) |
 
