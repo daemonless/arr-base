@@ -24,13 +24,13 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          # Build with base:15 (latest packages)
+          # Build with base:15 (quarterly packages - stable default)
           - base_version: "15"
-            tags: "15,latest,pkg-latest"
+            tags: "15,latest,pkg"
 
-          # Build with base:15-quarterly
-          - base_version: "15-quarterly"
-            tags: "15-quarterly,pkg"
+          # Build with base:15-latest (latest packages - bleeding edge)
+          - base_version: "15-latest"
+            tags: "15-latest,pkg-latest"
 
     steps:
       - name: Checkout repository
