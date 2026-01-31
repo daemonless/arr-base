@@ -1,1 +1,12 @@
 type: base
+build:
+  auto_version: true
+  variants:
+    - tag: "15"
+      args:
+        BASE_VERSION: "15"
+      aliases: ["latest", "pkg"]
+    - tag: "15-latest"
+      args:
+        BASE_VERSION: "15-latest"
+      aliases: ["pkg-latest"]
