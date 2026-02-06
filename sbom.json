@@ -1,11 +1,12 @@
 {
   "image": "arr-base",
-  "generated": "2026-02-01T22:36:25Z",
+  "generated": "2026-02-06T00:13:30Z",
   "tags": {
     "15-latest": {
+      "arch": "amd64",
       "app_version": "15.0",
       "source": "upstream-binary",
-      "generated": "2026-02-01T22:18:50Z",
+      "generated": "2026-02-05T23:50:42Z",
       "packages": {
         "freebsd": [
           {
@@ -248,9 +249,10 @@
       }
     },
     "15": {
+      "arch": "amd64",
       "app_version": "15.0",
       "source": "upstream-binary",
-      "generated": "2026-02-01T22:19:25Z",
+      "generated": "2026-02-05T23:49:48Z",
       "packages": {
         "freebsd": [
           {
@@ -451,7 +453,7 @@
           },
           {
             "name": "openssl",
-            "version": "3.0.18,1"
+            "version": "3.0.19,1"
           },
           {
             "name": "pkg",
