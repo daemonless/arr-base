@@ -1,12 +1,12 @@
 {
   "image": "arr-base",
-  "generated": "2026-02-27T22:05:15Z",
+  "generated": "2026-03-08T00:29:36Z",
   "tags": {
     "15-latest": {
       "arch": "amd64",
       "app_version": "15.0",
       "source": "upstream",
-      "generated": "2026-02-27T22:03:42Z",
+      "generated": "2026-03-08T00:28:45Z",
       "packages": {
         "freebsd": [
           {
@@ -211,7 +211,7 @@
           },
           {
             "name": "pkg",
-            "version": "2.5.1"
+            "version": "2.6.2"
           },
           {
             "name": "readline",
@@ -260,7 +260,7 @@
       "arch": "amd64",
       "app_version": "15.0",
       "source": "upstream",
-      "generated": "2026-02-27T22:05:06Z",
+      "generated": "2026-03-08T00:29:24Z",
       "packages": {
         "freebsd": [
           {
