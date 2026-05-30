@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-22T22:52:09Z",
+  "generated": "2026-05-30T22:37:57Z",
   "image": "arr-base",
   "tags": {
     "15": {
       "app_version": "15.0",
       "arch": "amd64",
-      "generated": "2026-05-22T22:50:42Z",
+      "generated": "2026-05-30T22:36:42Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -55,7 +55,7 @@
           },
           {
             "name": "FreeBSD-libcasper",
-            "version": "15.0"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-libexecinfo",
@@ -115,7 +115,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p8"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-runtime-lib32",
@@ -131,7 +131,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.0p1"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -255,7 +255,7 @@
     "15-latest": {
       "app_version": "15.0",
       "arch": "amd64",
-      "generated": "2026-05-22T22:50:59Z",
+      "generated": "2026-05-30T22:35:07Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -305,7 +305,7 @@
           },
           {
             "name": "FreeBSD-libcasper",
-            "version": "15.0"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-libexecinfo",
@@ -365,7 +365,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p8"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-runtime-lib32",
@@ -381,7 +381,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.0p1"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -477,7 +477,7 @@
           },
           {
             "name": "sqlite3",
-            "version": "3.50.4_2,1"
+            "version": "3.53.1,1"
           }
         ],
         "go": [],
