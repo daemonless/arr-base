@@ -10,7 +10,6 @@ Source: dbuild templates
 
 Shared base image for *Arr applications (Radarr, Sonarr, Lidarr, Prowlarr) containing common dependencies.
 
-
 | | |
 |---|---|
 | **Registry** | `ghcr.io/daemonless/arr-base` |
@@ -23,6 +22,8 @@ Shared base image for *Arr applications (Radarr, Sonarr, Lidarr, Prowlarr) conta
 | :--- | :--- | :--- |
 | `15` / `latest` / `pkg` | **FreeBSD Port**. Built from FreeBSD packages. | Production stability. |
 | `15-latest` / `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
+| `15.1` | **FreeBSD Port**. Built from FreeBSD packages. | Production stability. |
+| `15.1-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
 
 ## Prerequisites
 
@@ -35,7 +36,7 @@ Before deploying, ensure your host environment is ready. See the [Quick Start Gu
 ```yaml
 services:
   arr-base:
-    image: ghcr.io/daemonless/arr-base:latest
+    image: "ghcr.io/daemonless/arr-base:latest"
     container_name: arr-base
     restart: unless-stopped
 ```
@@ -53,12 +54,10 @@ podman run -d --name arr-base \
 - name: Deploy arr-base
   containers.podman.podman_container:
     name: arr-base
-    image: ghcr.io/daemonless/arr-base:latest
+    image: "ghcr.io/daemonless/arr-base:latest"
     state: started
     restart_policy: always
 ```
-
-## Parameters
 
 **Architectures:** amd64
 **User:** `root` (UID/GID via PUID/PGID, defaults to 1000:1000)
