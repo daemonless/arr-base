@@ -20,10 +20,10 @@ Shared base image for *Arr applications (Radarr, Sonarr, Lidarr, Prowlarr) conta
 
 | Tag | Description | Best For |
 | :--- | :--- | :--- |
-| `15` / `latest` / `pkg` | **FreeBSD Port**. Built from FreeBSD packages. | Production stability. |
-| `15-latest` / `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
-| `15.1` | **FreeBSD Port**. Built from FreeBSD packages. | Production stability. |
-| `15.1-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
+| `15` | **FreeBSD Port**. Built from FreeBSD packages. | Production stability. |
+| `15-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
+| `15.1` / `latest` / `pkg` | **FreeBSD Port**. Built from FreeBSD packages. | Production stability. |
+| `15.1-latest` / `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
 
 ## Prerequisites
 
