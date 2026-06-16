@@ -1,11 +1,11 @@
 {
-  "generated": "2026-06-16T09:03:00Z",
+  "generated": "2026-06-16T20:37:24Z",
   "image": "arr-base",
   "tags": {
     "15": {
       "app_version": "15.0",
       "arch": "amd64",
-      "generated": "2026-06-16T08:59:44Z",
+      "generated": "2026-06-16T20:34:22Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -255,7 +255,7 @@
     "15-latest": {
       "app_version": "15.0",
       "arch": "amd64",
-      "generated": "2026-06-16T09:00:01Z",
+      "generated": "2026-06-16T20:35:11Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -505,7 +505,7 @@
     "15.1": {
       "app_version": "15.1",
       "arch": "amd64",
-      "generated": "2026-06-16T09:01:42Z",
+      "generated": "2026-06-16T20:34:37Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -763,7 +763,7 @@
     "15.1-latest": {
       "app_version": "15.1",
       "arch": "amd64",
-      "generated": "2026-06-16T08:59:29Z",
+      "generated": "2026-06-16T20:36:07Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
