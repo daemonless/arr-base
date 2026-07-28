@@ -17,16 +17,14 @@ Shared base image for *Arr applications (Radarr, Sonarr, Lidarr, Prowlarr) conta
 | **Website** | [https://wiki.servarr.com/](https://wiki.servarr.com/) |
 
 ## Version Tags
-
 | Tag | Description | Best For |
 | :--- | :--- | :--- |
-| `15` | **FreeBSD Port**. Built from FreeBSD packages. | Production stability. |
+| `15` | **Upstream Binary**. Built from official release. | Alternative build. |
 | `15-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
-| `15.1` / `latest` / `pkg` | **FreeBSD Port**. Built from FreeBSD packages. | Production stability. |
+| `15.1` / `latest` / `pkg` | **Upstream Binary**. Built from official release. | Alternative build. |
 | `15.1-latest` / `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
 
 ## Prerequisites
-
 Before deploying, ensure your host environment is ready. See the [Quick Start Guide](https://daemonless.io/guides/quick-start) for host setup instructions.
 
 ## Deployment
@@ -61,7 +59,7 @@ podman run -d --name arr-base \
 
 **Architectures:** amd64
 **User:** `root` (UID/GID via PUID/PGID, defaults to 1000:1000)
-**Base:** FreeBSD 15.0
+**Base:** FreeBSD 15.1
 
 ---
 

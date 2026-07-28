@@ -8,8 +8,8 @@ x-daemonless:
   upstream_url: "https://github.com/daemonless/arr-base"
   web_url: "https://wiki.servarr.com/"
   user: "root"
-  upstream_binary: false
-  
+  appjail: false
+
   docs: {}
 
 services: {}
