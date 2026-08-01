@@ -1,20 +1,14 @@
 type: base
 build:
   variants:
-    - tag: "15"
-      args:
-        BASE_VERSION: "15"
-    - tag: "15-latest"
-      args:
-        BASE_VERSION: "15-latest"
     - tag: "15.1"
       args:
         BASE_VERSION: "15.1"
-      aliases: ["latest", "pkg"]
+      aliases: ["latest", "pkg", "15"]
     - tag: "15.1-latest"
       args:
         BASE_VERSION: "15.1-latest"
-      aliases: ["pkg-latest"]
+      aliases: ["pkg-latest", "15-latest"]
 
 cit:
   mode: shell
