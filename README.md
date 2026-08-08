@@ -55,7 +55,7 @@ podman run -d --name arr-base \
     restart_policy: always
 ```
 
-**Architectures:** amd64, aarch64
+**Architectures:** amd64
 **User:** `root` (UID/GID via PUID/PGID, defaults to 1000:1000)
 **Base:** FreeBSD 15.1
 
