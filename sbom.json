@@ -1,11 +1,11 @@
 {
-  "generated": "2026-08-01T13:15:31Z",
+  "generated": "2026-08-08T08:40:41Z",
   "image": "arr-base",
   "tags": {
     "15.1": {
       "app_version": "15.1",
       "arch": "amd64",
-      "generated": "2026-08-01T13:12:34Z",
+      "generated": "2026-08-08T08:38:50Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -42,13 +42,6 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-clibs",
-            "version": "15.1p2"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-clibs-lib32",
             "version": "15.1p2"
           },
           {
@@ -118,20 +111,6 @@
             "licenses": [
               "BSD2CLAUSE"
             ],
-            "name": "FreeBSD-libsqlite3",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-libsqlite3-lib32",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
             "name": "FreeBSD-libucl",
             "version": "15.1"
           },
@@ -153,21 +132,7 @@
             "licenses": [
               "BSD2CLAUSE"
             ],
-            "name": "FreeBSD-ncurses",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
             "name": "FreeBSD-ncurses-lib",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-ncurses-lib32",
             "version": "15.1"
           },
           {
@@ -211,13 +176,6 @@
             ],
             "name": "FreeBSD-runtime",
             "version": "15.1p2"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-runtime-lib32",
-            "version": "15.1p1"
           },
           {
             "licenses": [
@@ -281,20 +239,6 @@
             ],
             "name": "ca_root_nss",
             "version": "3.125"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "compat13x-amd64",
-            "version": "13.5.1305000.20250911"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "compat14x-amd64",
-            "version": "14.2.1402000.20251120_1"
           },
           {
             "licenses": [
@@ -428,7 +372,7 @@
       "source": "upstream",
       "summary": {
         "dotnet": 0,
-        "freebsd": 58,
+        "freebsd": 50,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -436,13 +380,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 58
+        "total": 50
       }
     },
     "15.1-latest": {
       "app_version": "15.1",
       "arch": "amd64",
-      "generated": "2026-08-01T13:13:39Z",
+      "generated": "2026-08-08T08:39:07Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -479,13 +423,6 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-clibs",
-            "version": "15.1p2"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-clibs-lib32",
             "version": "15.1p2"
           },
           {
@@ -555,20 +492,6 @@
             "licenses": [
               "BSD2CLAUSE"
             ],
-            "name": "FreeBSD-libsqlite3",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-libsqlite3-lib32",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
             "name": "FreeBSD-libucl",
             "version": "15.1"
           },
@@ -590,21 +513,7 @@
             "licenses": [
               "BSD2CLAUSE"
             ],
-            "name": "FreeBSD-ncurses",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
             "name": "FreeBSD-ncurses-lib",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-ncurses-lib32",
             "version": "15.1"
           },
           {
@@ -648,13 +557,6 @@
             ],
             "name": "FreeBSD-runtime",
             "version": "15.1p2"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-runtime-lib32",
-            "version": "15.1p1"
           },
           {
             "licenses": [
@@ -718,20 +620,6 @@
             ],
             "name": "ca_root_nss",
             "version": "3.125"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "compat13x-amd64",
-            "version": "13.5.1305000.20250911"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "compat14x-amd64",
-            "version": "14.2.1402000.20251120_1"
           },
           {
             "licenses": [
@@ -865,7 +753,7 @@
       "source": "upstream",
       "summary": {
         "dotnet": 0,
-        "freebsd": 58,
+        "freebsd": 50,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -873,7 +761,7 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 58
+        "total": 50
       }
     }
   }
