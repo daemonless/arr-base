@@ -2,7 +2,7 @@ ARG BASE_VERSION=15
 FROM ghcr.io/daemonless/base:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
-ARG PACKAGES="sqlite3 icu libunwind libinotify libiconv krb5 ca_root_nss openssl"
+ARG PACKAGES="sqlite3 icu libunwind libinotify libiconv krb5 ca_root_nss compat13x-amd64 openssl"
 
 LABEL org.opencontainers.image.title="arr-base" \
     org.opencontainers.image.description="Common base image for *arr applications on FreeBSD" \
