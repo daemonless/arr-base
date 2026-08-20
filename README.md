@@ -20,7 +20,7 @@ Shared base image for *Arr applications (Radarr, Sonarr, Lidarr, Prowlarr) conta
 | Tag | Description | Best For |
 | :--- | :--- | :--- |
 | `15` / `15.1` / `latest` / `pkg` | **Upstream Binary**. Built from official release. | Alternative build. |
-| `15-latest` / `15.1-latest` / `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
+| `15-latest` / `15.1-latest` / `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Staying current. |
 
 ## Prerequisites
 Before deploying, ensure your host environment is ready. See the [Quick Start Guide](https://daemonless.io/guides/quick-start) for host setup instructions.
