@@ -34,14 +34,39 @@ services:
   arr-base:
     image: "ghcr.io/daemonless/arr-base:latest"
     container_name: arr-base
-    restart: unless-stopped
+    # always (not unless-stopped) so FreeBSD's podman rc.d auto-starts it at boot
+    restart: always
 ```
+
+Save as `compose.yaml`, then run `podman-compose up -d`.
 
 ### Podman CLI
 
 ```bash
 podman run -d --name arr-base \
   ghcr.io/daemonless/arr-base:latest
+```
+
+Save as `run.sh`, then run `sh run.sh`.
+
+### Bastille
+
+> [!WARNING]
+> Bastille's OCI support is **experimental**. It requires `buildah`, shares the host network stack (`inherit`), and persists image-declared volumes under `--data-path`.
+
+```yaml
+services:
+  arr-base:
+    image: "ghcr.io/daemonless/arr-base:latest"
+    container_name: arr-base
+    network_mode: host  # jail shares host networking
+```
+
+Save as `podman-compose.yml`, then run `bastille up`. Or via CLI:
+
+```bash
+bastille create -O \
+  arr-base ghcr.io/daemonless/arr-base:latest inherit
 ```
 
 ### Ansible
@@ -54,6 +79,8 @@ podman run -d --name arr-base \
     state: started
     restart_policy: always
 ```
+
+Save as `arr-base-deploy.yaml`, then run `ansible-playbook arr-base-deploy.yaml`.
 
 **Architectures:** amd64
 **User:** `root` (UID/GID via PUID/PGID, defaults to 1000:1000)
