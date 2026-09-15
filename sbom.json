@@ -1,11 +1,11 @@
 {
-  "generated": "2026-08-29T17:23:29Z",
+  "generated": "2026-09-15T13:20:06Z",
   "image": "arr-base",
   "tags": {
     "15.1": {
       "app_version": "15.1",
       "arch": "amd64",
-      "generated": "2026-08-29T17:22:46Z",
+      "generated": "2026-09-15T13:19:11Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -280,7 +280,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.127"
+            "version": "3.129"
           },
           {
             "licenses": [
@@ -379,7 +379,7 @@
               "APACHE20"
             ],
             "name": "openssl",
-            "version": "3.0.21,1"
+            "version": "3.0.22,1"
           },
           {
             "licenses": [
@@ -442,7 +442,7 @@
     "15.1-latest": {
       "app_version": "15.1",
       "arch": "amd64",
-      "generated": "2026-08-29T17:22:01Z",
+      "generated": "2026-09-15T13:17:44Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -717,7 +717,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.127"
+            "version": "3.129"
           },
           {
             "licenses": [
