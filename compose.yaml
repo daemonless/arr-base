@@ -2,6 +2,7 @@ name: arr-base
 
 x-daemonless:
   title: "Arr Base"
+  class: "base"  # built FROM, not deployed: no Deployment section
   icon: ":material-layers:"
   category: "Base"
   description: "Shared base image for *Arr applications (Radarr, Sonarr, Lidarr, Prowlarr) containing common dependencies."
