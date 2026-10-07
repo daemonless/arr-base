@@ -23,67 +23,6 @@ Shared base image for *Arr applications (Radarr, Sonarr, Lidarr, Prowlarr) conta
 | `15` / `15.1` / `latest` / `pkg` | **Upstream Binary**. Built from official release. | Alternative build. |
 | `15-latest` / `15.1-latest` / `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Staying current. |
 
-## Prerequisites
-Before deploying, ensure your host environment is ready. See the [Quick Start Guide](https://daemonless.io/guides/quick-start) for host setup instructions.
-
-## Deployment
-
-### Podman Compose
-
-```yaml
-services:
-  arr-base:
-    image: "ghcr.io/daemonless/arr-base:latest"
-    container_name: arr-base
-    # always (not unless-stopped) so FreeBSD's podman rc.d auto-starts it at boot
-    restart: always
-```
-
-Save as `compose.yaml`, then run `podman-compose up -d`.
-
-### Podman CLI
-
-```bash
-podman run -d --name arr-base \
-  ghcr.io/daemonless/arr-base:latest
-```
-
-Save as `run.sh`, then run `sh run.sh`.
-
-### Bastille
-
-> [!WARNING]
-> Bastille's OCI support is **experimental**. It requires `buildah` and shares the host network stack (`inherit`). Mount volumes with `--volume HOST JAIL`; without it, image-declared volumes are stored under `${bastille_volumesdir}/${jail}`.
-
-```yaml
-services:
-  arr-base:
-    name: arr-base
-    image: "ghcr.io/daemonless/arr-base:latest"
-    network:
-      - mode: host
-```
-
-Save as `bastille-compose.yml`, then run `bastille up`. Or via CLI:
-
-```bash
-bastille create -O \
-  arr-base ghcr.io/daemonless/arr-base:latest inherit
-```
-
-### Ansible
-
-```yaml
-- name: Deploy arr-base
-  containers.podman.podman_container:
-    name: arr-base
-    image: "ghcr.io/daemonless/arr-base:latest"
-    state: started
-    restart_policy: always
-```
-
-Save as `arr-base-deploy.yaml`, then run `ansible-playbook arr-base-deploy.yaml`.
-
 **Architectures:** amd64
 **User:** `root` (UID/GID via PUID/PGID, defaults to 1000:1000)
 **Base:** FreeBSD 15.1
