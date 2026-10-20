@@ -20,7 +20,7 @@ Shared base image for *Arr applications (Radarr, Sonarr, Lidarr, Prowlarr) conta
 ## Version Tags
 | Tag | Description | Best For |
 | :--- | :--- | :--- |
-| `15` / `15.1` / `latest` / `pkg` | **Upstream Binary**. Built from official release. | Alternative build. |
+| `15` / `15-quarterly` / `15.1` / `latest` / `pkg` | **Upstream Binary**. Built from official release. | Alternative build. |
 | `15-latest` / `15.1-latest` / `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Staying current. |
 
 **Architectures:** amd64
