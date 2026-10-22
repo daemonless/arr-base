@@ -1,5 +1,5 @@
 ARG BASE_VERSION=15
-FROM ghcr.io/daemonless/base:${BASE_VERSION}
+FROM ghcr.io/daemonless/base-exec:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="sqlite3 icu libunwind libinotify libiconv krb5 ca_root_nss compat13x-amd64 openssl"
@@ -23,6 +23,4 @@ RUN pkg update && \
 # Create SQLite symlink for .NET interop and update linker cache
 RUN ln -sf libsqlite3.so /usr/local/lib/libe_sqlite3.so && ldconfig
 
-# Add common init scripts if needed
-COPY root/ /
 COPY scripts/install-arr.sh /usr/local/bin/install-arr.sh
