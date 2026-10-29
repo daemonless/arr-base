@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-22T22:54:48Z",
+  "generated": "2026-10-29T07:17:23Z",
   "image": "arr-base",
   "tags": {
     "15.1": {
       "app_version": "15.1",
       "arch": "amd64",
-      "generated": "2026-10-22T22:54:11Z",
+      "generated": "2026-10-29T07:16:24Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -224,7 +224,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p5"
+            "version": "15.1p6"
           },
           {
             "licenses": [
@@ -294,7 +294,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.131"
+            "version": "3.132"
           },
           {
             "licenses": [
@@ -435,7 +435,7 @@
     "15.1-latest": {
       "app_version": "15.1",
       "arch": "amd64",
-      "generated": "2026-10-22T22:53:49Z",
+      "generated": "2026-10-29T07:15:55Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -654,7 +654,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p5"
+            "version": "15.1p6"
           },
           {
             "licenses": [
@@ -724,7 +724,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.131"
+            "version": "3.132"
           },
           {
             "licenses": [
@@ -774,7 +774,7 @@
               "MIT"
             ],
             "name": "krb5",
-            "version": "1.22.2_3"
+            "version": "1.22.2_4"
           },
           {
             "licenses": [
